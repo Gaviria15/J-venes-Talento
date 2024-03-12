@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.retos.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="js/script.retos.js"></script>
+  <title>Retos</title>
+</head>
+
+
+<body>
+    <div id="navbar"></div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      // Cargar la barra de navegación usando jQuery
+      $(document).ready(function() {
+        // Utiliza el método load() para cargar la barra de navegación en el contenedor
+        $("#navbar").load("navbar.html");
+        $("#footer").load("footer.html");
+      });
+    </script>
+
+    <!-- CARRUSEL -->
+  <section id="container-slider">    
+    <a href="javascript: funcionEjecutar('anterior');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+    <a href="javascript: funcionEjecutar('siguiente');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+    <ul class="listslider">
+      <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+      <li><a itlist="itList_1" href="#"></a></li>
+      <li><a itlist="itList_2" href="#"></a></li>
+    </ul>
+    <ul id="slider">
+      <li style="background-image: url('https://images.pexels.com/photos/20599363/pexels-photo-20599363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); z-index:0; opacity: 1;">
+        <div class="content_slider" >
+          <div>
+            <h2></h2>
+        <p></p>
+      </div>
+        </div>
+      </li>
+      <li style="background-image: url('https://images.pexels.com/photos/207924/pexels-photo-207924.jpeg?auto=compress&cs=tinysrgb&w=600'); ">
+        <div class="content_slider" >
+          <div>
+            <h2>Imagen 2</h2>
+        <p>Escribe el texto que aparecerá sobre la imagen número 2</p>
+      </div>
+        </div>
+      </li>
+      <li style="background-image: url('imagenes/03.jpg'); ">
+        <div class="content_slider" >
+          <div>
+            <h2>Imagen 3</h2>
+        <p>Escribe el texto que aparecerá sobre la imagen número 3</p>
+        <a href="https://www.migueltroyano.com" target="_blank" class="btnSlider">Acceder</a>
+      </div>
+        </div>
+      </li>
+   </ul>
+ </section>
+    <h1 class="retosActuales">RETOS ACTUALES</h1>
+  <div class="container-card-retos">
+
+  <div class="card-retos" style="--clr:#12776d;">
+  <div class="imgBx"><img src="img/retoMetro.png" alt=""></div>
+  <div class="content-retos">
+    <h2>Reto Metro</h2>
+    <p>¡Únete al reto Metro y desarrolla tus habilidades en investigación, tecnología y talento humano, generando una solución real que favorezca la vida de los ciudadanos paisas!</p>
+    <a href="#">Registrarme</a>
+  </div>
+  </div>
+
+  <div class="card-retos" style="--clr:#6f1277;">
+  <div class="imgBx"><img src="img/retoRenting.png" alt=""></div>
+  <div class="content-retos">
+    <h2>Reto Renting</h2>
+    <p>¡Únete al reto Metro y desarrolla tus habilidades en investigación, tecnología y talento humano, generando una solución real que favorezca la vida de los ciudadanos paisas!</p>
+    <a href="#">Registrarme</a>
+  </div>
+  </div>
+  
+  <div class="card-retos" style="--clr:#a51e1e;">
+  <div class="imgBx"><img src="img/retoCamComercio.jpg" alt=""></div>
+  <div class="content-retos">
+    <h2>Cámara de comercio</h2>
+    <p>¡Únete al reto Metro y desarrolla tus habilidades en investigación, tecnología y talento humano, generando una solución real que favorezca la vida de los ciudadanos paisas!</p>
+    <a href="#">Registrarme</a>
+  </div>
+  </div>
+  
+  </div>
+ 
+</body>
+<div id="footer"></div>
+
+</html>
