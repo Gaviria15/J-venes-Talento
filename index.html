@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+<body>
+    <div id="navbar"></div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  // Cargar la barra de navegación usando jQuery
+  $(document).ready(function() {
+    // Utiliza el método load() para cargar la barra de navegación en el contenedor
+    $("#navbar").load("navbar.html");
+    $("#footer").load("footer.html");
+  });
+</script>
+<div id="footer"></div>
+</body>
+</html>
