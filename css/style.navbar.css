@@ -57,7 +57,36 @@ nav ul li a {
 nav ul li a:hover {
     background-size: 100% 2px;
 }
+.submenu {
+    transform-origin: top left;
+  }
+  
+  nav ul li ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 200px;
+    display: none; /* Oculta los submenús por defecto */
+  }
 
+  nav ul li.active ul {
+    display: block; /* Muestra el submenú cuando su elemento padre tiene la clase 'active' */
+  }
+  
+  nav ul li:hover ul.submenu {
+    pointer-events: none;
+    /* Aplica la transformación al submenu */
+    transform: translateX(-100%);
+  }
+  nav ul li ul li a {
+    background-color: #f5f5f5;
+    pointer-events: auto;
+  }
+  nav ul li ul li a:hover {
+    background-color: #f5f5f5;
+    pointer-events: auto;
+  }
+  
 .hamburger {
     cursor: pointer;
     height: fit-content;
