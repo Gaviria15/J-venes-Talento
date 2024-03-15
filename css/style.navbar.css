@@ -28,6 +28,14 @@ header {
     
 }
 
+nav{
+    display: flex;
+}
+.logousers{
+    width: 65px;
+    
+}
+
 .logo {
     width: 200px;
     margin-top: 8px;
@@ -36,7 +44,9 @@ header {
 nav .logo{
     display: none;
 }
-
+nav .logo2{
+    display: none;
+}
 nav ul{
     display: flex;
 }
@@ -87,6 +97,14 @@ nav ul li a:hover {
     pointer-events: auto;
   }
   
+
+.contenedor-botones1 {
+    display: none; 
+}
+.contenedor-botones2 {
+    display: none; 
+}
+
 .hamburger {
     cursor: pointer;
     height: fit-content;
@@ -117,13 +135,16 @@ nav ul li a:hover {
         left: -300px;
         top: 0;
         z-index: 999;
-        width: 280px;
-        height: 100hv;
-        background: #fff;
+        height: 600px;
+        background: #ffffff;
         transition: 0.2s;
-        box-shadow: 2px 0 20px 0 rgb(0, 0, 0, 0.05);
+        border-radius: 2px;
+        display: flex;
+        justify-content: flex-end;
+
     }
-    nav .logo{
+
+    .logo{
      display: block;
      height: 70px;
      display: flex;
@@ -131,7 +152,47 @@ nav ul li a:hover {
      margin-left: 30px;   
     }
 
-    #nav_check:checked ~ nav{
+    .contenedor-botones1 {
+        margin-left: -140px;
+        height: 10%;
+        margin-top: 530PX;
+        display: flex;
+    }
+    .contenedor-botones2 {
+        height: 10%;
+        margin-top: 530PX;
+        display: flex;
+    }
+    
+    .boton1, .boton2 {
+        width: 100px;
+        height: 40PX;
+        margin: 5px 5px;
+        background: #ffffff;
+        transition: 0.3s;
+        border: 2px solid #1e90ff;
+        border-radius: 5px;
+    }
+    .boton1:hover,.boton2:hover {
+        color: #fff;
+        background: #1e90ff;
+    }
+    nav .logo2{
+        display: block;
+        position: absolute;
+        left:10px;
+        top: -10px;
+        z-index: 999;
+        width: 200px;
+        height: 100px;
+        transition: 0.2s;
+       }
+
+     .logousers{
+        display: none;
+    }
+
+    #nav-check:checked ~ nav{
         left: 0;
     }
 
@@ -144,7 +205,7 @@ nav ul li a:hover {
     nav ul{
         display: block;
         padding: 0 20px;
-        margin-top: 30px;
+        margin-top: 80px;
     }
 
     .hamburger{
