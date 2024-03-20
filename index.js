@@ -18,6 +18,10 @@ app.get('/retos', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/retos.html'));
 });
 
+app.get('/miAgenda', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/miAgenda.html'));
+});
+
 // Puedes agregar más rutas según sea necesario
 
 app.listen(port, () => {
