@@ -22,6 +22,10 @@ app.get('/miAgenda', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/miAgenda.html'));
 });
 
+app.get('/acceso', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/acceso.html'));
+});
+
 // Puedes agregar más rutas según sea necesario
 
 app.listen(port, () => {
