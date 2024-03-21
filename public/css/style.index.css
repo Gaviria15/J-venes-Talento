@@ -20,7 +20,85 @@
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    padding-top: 120px;
+    padding-top: 110px;
     margin-left: 60%;
     font-size: 60px;
+   font-family: "Maven Pro", sans-serif;
+   font-weight: 500;
+  }
+
+.flecha {
+    height: 50px;
+    width: 60px;
+    margin-left: 63%;
+    padding-top: 190px;
+    position: absolute;
+}
+
+.texto1 {
+    font-size: 20px;
+     font-weight: 600;
+     width: 20%;
+     margin-left: 125px;
+     position: absolute;
+     margin-left: 1200px;
+     margin-top: 190px; 
+   font-family: "Maven Pro", sans-serif;
+   }
+
+.boton1 {
+    color: #000000;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 15%;
+    margin-left: 125px;
+    cursor: pointer;
+    border: 1px solid rgb(66, 184, 105);
+    background: transparent;
+    position: absolute;
+    margin-left: 1200px;
+    margin-top: 250px;
+    background-color: rgb(66, 184, 105);
+
+  }
+
+
+  .boton1:hover {
+    border-color: rgb(255, 255, 255);
+    border-width: 3px;
+    color: rgb(255, 255, 255);
+  }
+
+  .tituloIndex {
+    padding-top: 600px;
+    padding-left: 80px;
+   font-family: "Maven Pro", sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(255, 196, 175);
+    font-weight: 600;
+  }
+  .textoIndex {
+    padding-top: 100px;
+    font-size: 29px;
+    text-align: center;
+    align-items: center;
+    margin-left: 220px;
+    width: 70%;
+   font-family: "Maven Pro", sans-serif;
+
+  }
+
+  .textoGrande {
+    font-family: serif;
+    padding-top: 10px;
+    font-family: "Maven Pro", sans-serif;
+    color: rgb(255, 196, 175);
+    font-size: 30px;
+    margin: 100px;
+    margin-right: 100px;
   }
