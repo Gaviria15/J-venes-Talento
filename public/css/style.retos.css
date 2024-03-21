@@ -10,8 +10,8 @@
     position: relative;
     display: block;
     width: 100%;
-    height: 40vh;
-    min-height: 500px;
+    height: auto;
+    min-height: 600px;
     margin-top: 10px;
 }
 #slider li {
@@ -163,10 +163,12 @@
 /* Tarjetas de retos */
 
 .retos{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    font-size: 50px;
-    padding-top: 50px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 70px;
+  padding-top: 50px;
+  color: #a53737;
 }
 .container-card-retos{
     position: relative;
@@ -264,24 +266,19 @@ box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
     border: 2px solid  var(--clr);; /* Grosor del borde */
 }
 
+
+/* INFORMACIÓN DE RETOS  */
+.fechaInscripcion {
+  text-decoration: underline;
+}
 /* RETOS PASADOS */
 
-.retosPasados {
-    height: 140%;
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 20px;
-    background-image: url('../img/retosPasadosFondo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+
 
 .tituloRetosPasados {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #FFF;
-    font-size: 50px;
+    font-family: "Maven Pro", sans-serif;
+    color: #d47c7c;
+    font-size: 70px;
     text-align: center;
     top: 8%;
     left: 50%;
@@ -297,11 +294,12 @@ box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
   }
   
   .retosPasados {
+  height: 85%;
     display: inline-block;
     position: relative;
     width: 100%;
     padding-bottom: 20px;
-    background-image:  linear-gradient(rgba(3, 3, 3, 0.5),rgba(0, 0, 0, 0.55)), url('../img/retosPasadosFondo.jpg');
+    background-image:  url('../img/retosPasadosFondo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -325,21 +323,22 @@ box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
   }
   
   .boton {
-    color: #ffffff;
+    color: #000000;
     padding: 0.8rem;
     font-size: 14px;
     text-transform: uppercase;
     border-radius: 4px;
     font-weight: 400;
     display: block;
-    width: 100%;
+    width: 40%;
+    margin-left: 125px;
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: transparent;
   }
   
   .boton:hover {
-    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(43, 36, 36, 0.397);
   }
   
   .tarjetasRetosUsados {
@@ -364,7 +363,7 @@ box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 
 @media (min-width: 56rem) {
   .cards_item {
-    width: 26%;
+    width: 27%;
     
   }
 }
@@ -382,12 +381,12 @@ box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 
 .card_content {
   padding: 1rem;
-  background: linear-gradient(to bottom left, #491C04 40%, #491C04 100%);
+  background: #ffffff;
 }
 
 .titulo-tarjeta {
-  color: #ffffff;
-  font-size: 1.1rem;
+  color: #3742a5;
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -395,8 +394,8 @@ box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 }
 
 .texto-tarjeta {
-  color: #ffffff;
-  font-size: 0.875rem;
+  color: #353434;
+  font-size: 20px;
   line-height: 1.5;
   margin-bottom: 1.25rem;    
   font-weight: 400;
@@ -425,7 +424,7 @@ box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
     z-index:99999;
   }
   .modal{
-    background-color:white;
+    background-color:rgb(255, 255, 255);
     height: 100%;
     position:relative;
     margin:0 auto;
@@ -438,16 +437,18 @@ box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
   	 max-height: 57em;
       max-width:66em;
       width:85%;
+      display: flex;
+      flex-wrap: wrap;
   	}
 	> iframe, > div{
 		border:none;
 		width:100%;
-		height:100%;
+		height:100%;    
     }
   }
   .close{
-    background-color:turquoise;
-    color:white;
+    background-color:rgb(86, 94, 167);
+    color:rgb(255, 255, 255);
     font-size:24px;
     padding:8px 12px;
     position:absolute;
@@ -457,4 +458,49 @@ box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
     top:0;
     z-index: 1;
   }
+}
+
+.hrIzquierda {
+  margin-left: 0%;
+  margin-right: 60%;
+
+}
+
+.hrDerecha {
+  margin-right: 0%;
+  margin-left: 60%;
+
+}
+
+.img1Modal{
+  width: 500px;
+  height: 200px;
+  border-radius: 10%;
+  float: left;
+  padding-right: 20px;
+}
+
+.img2Modal {
+  width: 500px;
+  max-height: max-content;
+  border-radius: 10%;
+  float: left;
+}
+.tituloModal {
+  font-family: "M PLUS 2", sans-serif;
+  font-weight: 400;
+  color: rgb(0, 26, 255);
+  margin-top: -20px;
+
+}
+
+.textoModal {
+  font-size: 22px;
+  font-family: "Maven Pro", sans-serif;
+}
+
+.texto2Modal {
+  font-size: 22px;
+  font-family: "Maven Pro", sans-serif;
+  padding-top: 380px;
 }
