@@ -80,32 +80,37 @@ nav ul li a:hover {
     background-size: 100% 2px;
 }
 .submenu {
-    transform-origin: top left;
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 120px;
+    background-color:  #f0f0f0;
   }
-  
+.menu:hover li .submenu{
+    display:block;
+}
+.submenu li:hover{
+    background-color: #f0f0f0;
+}
   nav ul li ul {
     position: absolute;
     left: 100%;
     top: 0;
     width: 200px;
-    display: none; /* Oculta los submenús por defecto */
+    display: none;
   }
 
-  nav ul li.active ul {
-    display: block; /* Muestra el submenú cuando su elemento padre tiene la clase 'active' */
-  }
   
   nav ul li:hover ul.submenu {
-    pointer-events: none;
-    /* Aplica la transformación al submenu */
-    transform: translateX(-100%);
+    top: 50px;
+    transform: translateX(-340%);
   }
   nav ul li ul li a {
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
     pointer-events: auto;
   }
   nav ul li ul li a:hover {
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
     pointer-events: auto;
   }
   
@@ -148,12 +153,20 @@ nav ul li a:hover {
         top: 0;
         z-index: 999;
         height: 600px;
-        background: #ffffff;
+        background: #f0f0f0;
         transition: 0.2s;
         border-radius: 2px;
         display: flex;
         justify-content: flex-end;
 
+    }
+
+    .submenu{
+        position: absolute;
+        top: 135px;
+        width: 115px;
+        left: 110px;
+        padding: 0;
     }
 
     .logo{

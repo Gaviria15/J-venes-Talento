@@ -420,35 +420,35 @@ addEventSubmit.addEventListener("click", () => {
 //function to delete event when clicked on event
 eventsContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("event")) {
-    if (confirm("Quieres eliminar este evento?")) {
-      const eventTitle = e.target.children[0].children[1].innerHTML;
-      eventsArr.forEach((event) => {
-        if (
-          event.day === activeDay &&
-          event.month === month + 1 &&
-          event.year === year
-        ) {
-          event.events.forEach((item, index) => {
-            if (item.title === eventTitle) {
-              event.events.splice(index, 1);
-            }
-          });
-          //if no events left in a day then remove that day from eventsArr
-          if (event.events.length === 0) {
-            eventsArr.splice(eventsArr.indexOf(event), 1);
-            //remove event class from day
-            const activeDayEl = document.querySelector(".day.active");
-            if (activeDayEl.classList.contains("event")) {
-              activeDayEl.classList.remove("event");
-            }
-          }
-        }
-      });
-      updateEvents(activeDay);
-    }
+
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: "btn btn-success",
+        cancelButton: "btn btn-danger"
+      },
+      buttonsStyling: false
+    });
+    Swal.fire({
+      title: "Reto Metro",
+      html: "Lugar: Estación Poblado <br> Anfitrión: Santiago<br>Motivo: Presentación<br>Participantes: pepe<br>Fecha y hora de inicio: 21/03/24 2:00 PM<br>Fecha y hora de fin: 21/03/24 5:00 PM",
+      imageUrl: "https://img.freepik.com/vector-premium/pequeno-hombre-delante-ilustracion-dibujos-animados-calendario-gigante_74855-16289.jpg?w=740",
+      imageWidth: 350,
+      imageHeight: 250,
+      cancelButtonText: "Cancelar",
+      confirmButtonText: "participar",
+      showCancelButton: true,
+      showCloseButton: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Good job!",
+          text: "You clicked the button!",
+          icon: "success"
+        });
+      }
+    });
   }
 });
-
 //function to save events in local storage
 function saveEvents() {
   localStorage.setItem("events", JSON.stringify(eventsArr));

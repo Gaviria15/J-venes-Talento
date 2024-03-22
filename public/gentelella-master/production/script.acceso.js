@@ -294,10 +294,10 @@ const listUsers = async () => {
                     <td> ${user.name} </td>
                     <td> ${user.email} </td>
                     <td> ${user.address.city} </td>
-                    <td> ${user.company.name} </td>
+                    <td> ${user.status} </td>
                     <td>  <button class="btn btn-sm btn-primary"><i class="fa-solid fa-pencil"></i></button> </td>
                     <td>  <button class="btn btn-sm btn-danger" onclick="alertaEliminar()"><i class="fa-solid fa-trash-can"></i></button> </td>
-                    <td> <button class="btn btn-sm btn-primary" onclick="alertaEstado()"><i class="fa-solid fa-pencil"></i></button> </td>
+                    <td> <button class="btn btn-sm btn-primary" onclick="alertaEstado()"><i class="fa-solid fa-circle-check"></i></button> </td>
 
                 </tr>`;
     });
