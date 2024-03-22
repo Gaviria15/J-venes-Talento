@@ -1,5 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 20px;
+  }
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 50px;
+  }
+::-webkit-scrollbar-thumb {
+    background: #bebebe;
+    border-radius: 50px;
+  }
+
 nav {
     background-color: #FADAB0;
     justify-content: space-between;
@@ -30,7 +46,10 @@ nav {
 }
 
 body {
-	background: #f6f5f7;
+	background-image: url("../img/fondo-acceso.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -60,16 +79,16 @@ span {
 }
 
 a {
-	color: #333;
+	color: #ffffff;
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
 }
 
-button {
+.botonregistro {
 	border-radius: 20px;
-	border: 1px solid #41ffb6;
-	background-color: #4ef5b5;
+	border: 1px solid #000000;
+	background-color: #000000;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -77,6 +96,13 @@ button {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
+}
+.botonregistro:hover {
+	border-radius: 20px;
+	border: 1px solid #ffffff6e;
+	background-color: #ffffff6e;
+	color: #000000;
+	transition: 0.5s;
 }
 
 button:active {
@@ -87,34 +113,63 @@ button:focus {
 	outline: none;
 }
 
-button.ghost {
+.ghost {
+	border-radius: 20px;
+	border: 1px solid #000000;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
 
 .formRegistro {
 	overflow-y: auto;
-	background-color: #FFFFFF;
+	background-color: transparent;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	border-radius: 3px;
 	padding: 10px 50px;
 	height: 100%;
 	text-align: center;
 }
 
+
+
 input {
-	background-color: #eee;
-	border: none;
+	background-color: transparent;
+	border: 1px solid white;
 	padding: 12px 15px;
+	border-radius: 6px;
 	margin: 8px 0;
 	width: 100%;
 }
 
+select {
+	background-color:transparent;
+	border: 1px solid white;
+	padding: 12px 15px;
+	border-radius: 3px;
+	margin: 8px 0;
+	width: 100%;
+	color: white;
+}
+select option{
+	background-color: transparent !important;
+}
 
+input::placeholder {
+	color: white;
+  }
+  
 
 .container {
-	background-color: #fff;
+	background-color:transparent;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
 			0 10px 10px rgba(0,0,0,0.22);
@@ -123,7 +178,7 @@ input {
 	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
-	margin-top: 50px;
+	margin-top: 85px;
 }
 
 .form-container {
@@ -134,16 +189,20 @@ input {
 }
 
 .sign-in-container {
+	transition: 3s;
 	left: 0;
 	width: 50%;
 	z-index: 2;
 }
 
 .loginRegister{
-	font-size: 35px;
+	color: white;
+	font-size: 30px;
+	margin: 10px;
 }
 .container.right-panel-active .sign-in-container {
 	transform: translateX(100%);
+	display: none;
 }
 
 .sign-up-container {
@@ -188,9 +247,7 @@ input {
 }
 
 .overlay {
-	background: #41ffb6;
-	background: -webkit-linear-gradient(to right, #47f8b4, #43ebaa);
-	background: linear-gradient(to right, #41ffb6, #41ffb6);
+	background: transparent;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -224,10 +281,15 @@ input {
 
 .overlay-left {
 	transform: translateX(-20%);
+	opacity: 1;
+	transition: opacity 0.5s ease;
 }
 
 .container.right-panel-active .overlay-left {
 	transform: translateX(0);
+	
+	opacity: 1;
+	transition: opacity 0.5s ease;
 }
 
 .overlay-right {
