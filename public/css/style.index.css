@@ -20,8 +20,8 @@
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    padding-top: 110px;
-    margin-left: 60%;
+    padding-top: 100px;
+    margin-left: 50%;
     font-size: 60px;
    font-family: "Maven Pro", sans-serif;
    font-weight: 500;
@@ -30,8 +30,8 @@
 .flecha {
     height: 50px;
     width: 60px;
-    margin-left: 63%;
-    padding-top: 190px;
+    margin-left: 55%;
+    padding-top: 200px;
     position: absolute;
 }
 
@@ -39,9 +39,8 @@
     font-size: 20px;
      font-weight: 600;
      width: 20%;
-     margin-left: 125px;
      position: absolute;
-     margin-left: 1200px;
+     margin-left: 800px;
      margin-top: 190px; 
    font-family: "Maven Pro", sans-serif;
    }
@@ -60,17 +59,17 @@
     border: 1px solid rgb(66, 184, 105);
     background: transparent;
     position: absolute;
-    margin-left: 1200px;
-    margin-top: 250px;
+    margin-left: 850px;
+    margin-top: 280px;
     background-color: rgb(66, 184, 105);
 
   }
 
 
   .boton1:hover {
-    border-color: rgb(255, 255, 255);
-    border-width: 3px;
-    color: rgb(255, 255, 255);
+    border-color: rgba(255, 255, 255, 0.329);
+    color: rgba(255, 255, 255, 0.329);
+    transition: 0.1s;
   }
 
   .tituloIndex {
@@ -84,7 +83,7 @@
   }
   .textoIndex {
     padding-top: 100px;
-    font-size: 29px;
+    font-size: 25px;
     text-align: center;
     align-items: center;
     margin-left: 220px;
@@ -98,7 +97,9 @@
     padding-top: 10px;
     font-family: "Maven Pro", sans-serif;
     color: rgb(255, 196, 175);
-    font-size: 30px;
+    font-size: 28px;
     margin: 100px;
     margin-right: 100px;
+    text-align: center;
+    font-weight: 500;
   }
