@@ -161,13 +161,13 @@ nav ul li a:hover {
 
     }
 
-    .submenu{
+    /* .submenu{
         position: absolute;
         top: 135px;
         width: 115px;
         left: 110px;
         padding: 0;
-    }
+    } */
 
     .logo{
      display: block;

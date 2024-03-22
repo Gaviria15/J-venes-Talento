@@ -148,6 +148,12 @@ input {
 	border-radius: 6px;
 	margin: 8px 0;
 	width: 100%;
+	appearance: none; 
+
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
 }
 
 select {
@@ -158,9 +164,17 @@ select {
 	margin: 8px 0;
 	width: 100%;
 	color: white;
+	appearance: none; 
 }
 select option{
-	background-color: transparent !important;
+	color: black;
+
+
+}
+select option:hover{
+	background: transparent;
+	color: black;
+
 }
 
 input::placeholder {

@@ -6,72 +6,85 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/6c56692656.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.acceso.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert2 -->
     
     <title>Registrate!</title>
 </head>
 <body>
 
 <div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form class="formRegistro" action="#">
-			<h1 class="loginRegister">¡Crea tu cuenta!</h1>
-			<input type="text" placeholder="Nombres" />
-			<input type="text" placeholder="Apellidos" />
-			<select>
-				<option selected>Tipo de documento</option>
-				<option value="">TI</option>
-				<option value="">CC</option>
-				<option value="">CE</option>
-			</select>
-			<input type="number" placeholder="Número de documento" />
-			<select>
-				<option selected>Género</option>
-				<option value="">Masculino</option>
-				<option value="">Femenino</option>
-				<option value="">Prefiero no decirlo</option>
-			</select>
-			<input type="number" placeholder="celular" />
-			<select >
-				<option selected>Institución/universidad</option>
-				<option value="">Colegio</option>
-				<option value="">Universidad</option>
-			</select>
-			<input type="text" placeholder="Nombre de la institución" />
-			<input type="text" placeholder="Grado" />
-			<input type="email" placeholder="Correo" />
-			<input type="password" placeholder="Contraseña" />
-			<input type="password" placeholder="Confirma tu contraseña" />
+    <div class="form-container sign-up-container">
+        <form id="registroForm" action="#" class="formRegistro">
+            <h1 class="loginRegister">¡Crea tu cuenta!</h1>
+            <input type="text" id="nombres" placeholder="Nombres" oninput="changeTextColor(this)" />
+            <div id="nombresWarning" style="color: red;"></div> <!-- Elemento para mostrar advertencia -->
+            <input type="text" id="apellidos" placeholder="Apellidos" oninput="changeTextColor(this)" />
+            <div id="apellidosWarning" style="color: red;"></div> <!-- Elemento para mostrar advertencia -->
+            <select id="tipoDocumento" oninput="changeTextColor(this)">
+                <option value="" disabled selected>Tipo de documento</option>
+                <option value="TI">TI</option>
+                <option value="CC">CC</option>
+                <option value="CE">CE</option>
+            </select>
+            <div id="tipoDocumentoWarning" style="color: red;"></div> <!-- Elemento para mostrar advertencia -->
+            <input type="number" id="numeroDocumento" placeholder="Número de documento" oninput="changeTextColor(this)" />
+            <div id="numeroDocumentoWarning" style="color: red;"></div> <!-- Elemento para mostrar advertencia -->
+            <select id="genero" oninput="changeTextColor(this)">
+                <option value="" disabled selected>Género</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="No especificado">Prefiero no decirlo</option>
+            </select>
+            <div id="generoWarning" style="color: red;"></div> <!-- Elemento para mostrar advertencia -->
+            <input type="number" id="celular" placeholder="Celular" oninput="changeTextColor(this)" />
+            <div id="celularWarning" style="color: red;"></div> <!-- Elemento para mostrar advertencia -->
+            <select id="institucion" oninput="changeTextColor(this)">
+                <option value="" disabled selected>Institución/universidad</option>
+                <option value="Colegio">Colegio</option>
+                <option value="Universidad">Universidad</option>
+            </select>
+            <div id="institucionWarning" style="color: red;"></div> <!-- Elemento para mostrar advertencia -->
+            <input type="text" id="nombreInstitucion" placeholder="Nombre de la institución" oninput="changeTextColor(this)" />
+            <div id="nombreInstitucionWarning" style="color: red;"></div> <!-- Elemento para mostrar advertencia -->
+            <input type="text" id="grado" placeholder="Grado" oninput="changeTextColor(this)" />
+            <div id="gradoWarning" style="color: red;"></div> <!-- Elemento para mostrar advertencia -->
+            <input type="email" id="correo" placeholder="Correo" oninput="changeTextColor(this)" />
+            <div id="correoWarning" style="color: red;"></div> <!-- Elemento para mostrar advertencia -->
+            <input type="password" id="contrasena" placeholder="Contraseña" oninput="changeTextColor(this)" />
+            <div id="contrasenaWarning" style="color: red;"></div> <!-- Elemento para mostrar advertencia -->
+            <input type="password" id="confirmarContrasena" placeholder="Confirma tu contraseña" oninput="changeTextColor(this)" />
+            <div id="confirmarContrasenaWarning" style="color: red;"></div> <!-- Elemento para mostrar advertencia -->
 
-			<button class="botonregistro">Registrarte</button>
-		</form>
-	</div>
-	
-	<div class="form-container sign-in-container" >
-		<form class="formRegistro" action="#" style="justify-content: center;">
-			<h1 class="loginRegister">Inicia sesión</h1>
-	
-			<input type="email" placeholder="Correo" />
-			<input type="password" placeholder="Contraseña" />
-			<a href="#">¿Olvidaste tu contraseña?</a>
-			<button class="botonregistro">Iniciar sesión</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>¡Bienvenido de nuevo!</h1>
-				<p>Para mantenerte conectado con nosotros, inicia sesión con tu información personal</p>
-				<button class="ghost" id="signIn">Iniciar sesión</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>¡Hola, amigo!</h1>
-				<p>Introduce tus datos personales y comienza tu viaje con nosotros.</p>
-				<button class="ghost" id="signUp">Registrarme</button>
-			</div>
-		</div>
-	</div>
-	
+            <button type="submit" class="botonregistro">Registrarte</button>
+        </form>
+    </div>
+    
+    <div class="form-container sign-in-container" >
+        <form id="loginForm" action="#" class="formRegistro" style="justify-content: center;">
+            <h1 class="loginRegister">Inicia sesión</h1>
+    
+            <input type="email" id="loginCorreo" placeholder="Correo" oninput="changeTextColor(this)" />
+            <input type="password" id="loginContrasena" placeholder="Contraseña" oninput="changeTextColor(this)" />
+            <a href="restablecerContraseña.html">¿Olvidaste tu contraseña?</a>
+            <button type="submit" class="botonregistro">Iniciar sesión</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>¡Bienvenido de nuevo!</h1>
+                <p>Para mantenerte conectado con nosotros, inicia sesión con tu información personal</p>
+                <button class="ghost" id="signIn">Iniciar sesión</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>¡Hola, amigo!</h1>
+                <p>Introduce tus datos personales y comienza tu viaje con nosotros.</p>
+                <button class="ghost" id="signUp">Registrarme</button>
+            </div>
+        </div>
+    </div>
+    
 </div>
-<script src="./js/script.acceso.js"></script>
 </body>
+<script src="./js/script.acceso.js"></script>
 </html>
